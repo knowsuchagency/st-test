@@ -10,7 +10,7 @@ A proud troll, Marty’s father longed for the day when his son would fulfill hi
 And yet, Marty’s true passion had always been dance.
 """.strip()
 
-openai.api_key = os.getenv("API_KEY")
+openai.api_key = os.getenv("API_KEY", st.secrets["API_KEY"])
 
 if not st.session_state.get("logged_in"):
     with st.form("login"):
